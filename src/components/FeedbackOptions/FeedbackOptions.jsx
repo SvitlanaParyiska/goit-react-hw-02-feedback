@@ -1,18 +1,19 @@
 import React from 'react';
+import { BoxFeedback, Button } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <BoxFeedback>
       {options.map(option => (
-        <button
+        <Button
           key={option}
           type="button"
           onClick={() => onLeaveFeedback(option)}
         >
           {option}
-        </button>
+        </Button>
       ))}
-    </div>
+    </BoxFeedback>
   );
 };
 
